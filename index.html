@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Movie Gallery</a></li>
+            <li><a href="#favorites">Favoritos</a></li> 
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Bienvenidos a Netflix</h1>
+        <p> Netflix es tu destino definitivo para explorar el apasionante mundo del cine! Aquí, los amantes del cine pueden descubrir una vasta selección de películas de todos los géneros, desde emocionantes películas de acción y conmovedores dramas hasta divertidas comedias y aterradoras películas de terror.
+
+            ¿Buscas algo específico? Navega a través de nuestra galería de películas, donde podrás filtrar por género y encontrar tus favoritas con facilidad para que puedas decidir cuál ver a continuación.
+            
+            Además, no olvides marcar tus películas favoritas! Con nuestra funcionalidad de favoritos, puedes guardar y acceder rápidamente a las películas que más te han gustado. ¡Nunca ha sido tan fácil mantener un registro de tus películas imperdibles!
+            
+            Únete a nuestra comunidad de cinéfilos y comparte tu pasión por el cine. Descubre, disfruta y déjate llevar por la magia del séptimo arte. ¡Explora Netflix y encuentra tu próxima gran aventura cinematográfica!</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Galería de Películas</h2>
+        <div class="filters">
+            <label for="genre">Filtrar por género:</label>
+            <select id="genre">
+                <option value="all">Todos</option>
+                <option value="action">Acción</option>
+                <option value="comedy">Comedia</option>
+                <option value="drama">Drama</option>
+                <option value="sci-fi">Ciencia Ficción</option>
+                <option value="anime">Anime</option>
+                <option value="romance">Romance</option>
+                <option value="horror">Terror</option>
+                <option value="slasher">Slasher</option>
+            </select>
+        </div>
+
+        <div class="movie-gallery">
+            <div class="movie-card" data-genre="anime" onclick="openModal('movie1')">
+                <img src="https://i0.wp.com/codigoespagueti.com/wp-content/uploads/2021/06/jujutsu-kaisen-0-pelicula-poster-fecha-estreno.jpg?resize=1280%2C1810&ssl=1" alt="Poster de Acción" class="poster" data-id="1">
+                <h3>Jujutsu kaisen</h3>
+                <p>Adéntrate en historias vibrantes y emocionantes que capturan la esencia de la cultura japonesa.</p>
+                <button class="favorite-btn">Favorite</button>
+            </div>
+        
+            
+            <div class="movie-card" data-genre="action" onclick="openModal('movie2')">
+                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/j09ZkH6R4JWVylBcDai1laCmGw7.jpg" alt="Poster de Comedia" class="poster" data-id="2">
+                <h3>Los indestructibles 1</h3>
+                <p>Disfruta de emocionantes secuencias de combate, persecuciones trepidantes y héroes que desafían lo imposible. </p>
+                <button class="favorite-btn">Favorite</button>
+            </div>
+        
+          
+            <div class="movie-card" data-genre="drama" onclick="openModal('movie3')">
+                <img src="https://www.mubis.es/media/movies/6220/226376/la-favorita-original.jpg" alt="Poster de Drama" class="poster" data-id="3">
+                <h3>La favorita</h3>
+                <p>Vive historias de amor cautivadoras que exploran el deseo, la pasión y el sacrificio.</p>
+                <button class="favorite-btn">Favorite</button>
+            </div>
+        
+           
+            <div class="movie-card" data-genre="romance" onclick="openModal('movie4')">
+                <img src="https://m.media-amazon.com/images/I/719UfUSeKgL._AC_UF894,1000_QL80_.jpg" alt="Poster de Ciencia Ficción" class="poster" data-id="4">
+                <h3>La propuesta</h3>
+                <p>Vive historias de amor cautivadoras que exploran el deseo, la pasión y el sacrificio. Las películas románticas te transportan a momentos mágicos que celebran las conexiones humanas.</p>
+                <button class="favorite-btn">Favorite</button>
+            </div>
+        
+           
+            <div class="movie-card" data-genre="slasher" onclick="openModal('movie5')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b1/Halloween_%282018%29_poster.jpg/220px-Halloween_%282018%29_poster.jpg" alt="Poster de Terror" class="poster" data-id="5">
+                <h3>Halloween(2018)</h3>
+                <p>Disfruta de un subgénero de terror donde asesinos implacables acechan a sus víctimas. Las películas slasher combinan sangre y tensión, ofreciendo giros inesperados que desafían a los más valientes.</p>
+                <button class="favorite-btn">Favorite</button>
+            </div>
+        
+           
+            <div class="movie-card" data-genre="comedy" onclick="openModal('movie6')">
+                <img src="https://play-lh.googleusercontent.com/BKK63bcAzhBOcST8rqKuhAjNt4QPTBKN5bNLvlw5_GjPJrT6PEY3NeVRJDMwzMI56vat" alt="Poster de Romance" class="poster" data-id="6">
+                <h3>¿Que paso ayer? 1</h3>
+                <p>Ríe a carcajadas con historias divertidas y personajes entrañables.</p>
+                <button class="favorite-btn">Favorite</button>
+            </div>
+        
+           
+            <div class="movie-card" data-genre="action" onclick="openModal('movie7')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/e/e9/Black_Widow_%282021_film%29_poster.jpg" alt="Poster de Acción" class="poster" data-id="7">
+                <h3>Black widow</h3>
+                <p>Una pelicula emocionante de accion con un monton de explosiones!</p>
+                <button class="favorite-btn">Favorite</button>
+            </div>
+        
+           
+            <div class="movie-card" data-genre="sci-fi" onclick="openModal('movie8')">
+                <img src="https://legrandcontinent.eu/es/wp-content/uploads/sites/2/2024/03/5392835.jpg" alt="Poster de Comedia" class="poster" data-id="8">
+                <h3>Dune</h3>
+                <p>Una aventura emocionante de ciencia ficcion que va a traves del tiempo y las estrellas</p>
+                <button class="favorite-btn">Favorite</button>
+            </div>
+        
+            <div class="movie-card" data-genre="romance" onclick="openModal('movie9')">
+                <img src="https://m.media-amazon.com/images/I/91iZ94x7hVL._AC_UF894,1000_QL80_.jpg" alt="Poster de Drama" class="poster" data-id="9">
+                <h3>Lost in translation</h3>
+                <p>Un drama profundo sobre la vida y las relaciones</p>
+                <button class="favorite-btn">Favorite</button>
+            </div>
+        
+           
+            <div class="movie-card" data-genre="anime" onclick="openModal('movie10')">
+                <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/128a3b34307dac418454b3a8831a495f.jpe" alt="Poster de Ciencia Ficción" class="poster" data-id="10">
+                <h3>Berserk: The golden age arc</h3>
+                <p>Unete a una historia épica de camaradería, ambición y sacrificio que redefine la lucha por la supervivencia. </p>
+                <button class="favorite-btn">Favorite</button>
+            </div>
+        
+             
+             <div class="movie-card" data-genre="horror" onclick="openModal('movie11')">
+                <img src="https://es.web.img2.acsta.net/medias/nmedia/18/95/72/49/20424864.jpg" alt="Poster de Ciencia Ficción" class="poster" data-id="11">
+                <h3>La novia de Chucky</h3>
+                <p>Siente el escalofrío de la oscuridad y lo desconocido. Las películas de terror te sumergen en relatos que provocan miedo y suspenso, manteniéndote alerta y temeroso de lo que viene.</p>
+                <button class="favorite-btn">Favorite</button>
+            </div>
+        
+        
+         
+        </div>
+        </section>
+        
+    
+
+        <section id="favorites">
+            <h2>Favoritos</h2>
+            <div class="movie-gallery" id="favorites-gallery">
+                <div id="favorites-list"></div> 
+            </div>
+        </section>
+        
+
+    <footer>
+        <p>2024 Netflix</p>
+    </footer>
+
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="movie-title">Título de la Película</h2>
+            <p id="movie-description">Descripción detallada de la película...</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          
+            initializeFavorites();
+
+           
+            document.querySelector('.movie-gallery').addEventListener('click', function(event) {
+                if (event.target.classList.contains('favorite-btn')) {
+                    toggleFavorite(event);
+                }
+            });
+
+            
+            document.getElementById("genre").addEventListener("change", function() {
+                var selectedGenre = this.value;
+                var movies = document.querySelectorAll(".movie-card");
+
+                movies.forEach(function(movie) {
+                    if (selectedGenre === 'all' || movie.getAttribute('data-genre') === selectedGenre) {
+                        movie.style.display = "block";
+                    } else {
+                        movie.style.display = "none";
+                    }
+                });
+            });
+        });
+
+        function initializeFavorites() {
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            favorites.forEach(id => {
+                const movieCard = document.querySelector(`.movie-card[data-id="${id}"]`);
+                if (movieCard) {
+                    const favoriteBtn = movieCard.querySelector('.favorite-btn');
+                    favoriteBtn.textContent = 'Favorited';
+                    favoriteBtn.classList.add('favorited');
+                }
+            });
+        }
+
+        function toggleFavorite(event) {
+            const button = event.target;
+            const movieCard = button.closest('.movie-card');
+            const movieId = movieCard.getAttribute('data-id');
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+            if (favorites.includes(movieId)) {
+                favorites = favorites.filter(id => id !== movieId);
+                button.textContent = 'Favorite';
+                button.classList.remove('favorited');
+            } else {
+                favorites.push(movieId);
+                button.textContent = 'Favorited';
+                button.classList.add('favorited');
+            }
+
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+        }
+
+        function openModal(movieId) {
+            
+        }
+
+        function closeModal() {
+            
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
